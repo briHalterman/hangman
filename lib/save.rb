@@ -1,3 +1,5 @@
+# Save class
+
 require 'yaml'
 
 class Save

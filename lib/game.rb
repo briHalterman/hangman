@@ -53,10 +53,9 @@ class Game
   end
 
   def play_round
-    puts "Secret word: #{@secret_word}" # For development and testing
+    # puts "Secret word: #{@secret_word}" # For development and testing
     puts
     puts "Strikes: #{@strike_counter}"
-    # puts "Correct guesses: #{@correct_guesses}"
     puts "Incorrect guesses: #{@incorrect_guesses}"
 
     puts display_word_state
@@ -69,5 +68,7 @@ class Game
     while @strike_counter < 6
       play_round
     end
+    puts "Secret word: '#{@secret_word}'"
+    puts "Too many strikes! You're out!"
   end
 end

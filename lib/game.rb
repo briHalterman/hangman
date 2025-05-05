@@ -10,4 +10,14 @@ class Game
     @correct_guesses = []
     @incorrect_guesses = []
   end
+
+  def display_word_state
+    @secret_word.chars.map do |letter|
+      if @correct_guesses.include?(letter)
+        letter
+      else
+        '_'
+      end
+    end.join(' ')
+  end
 end

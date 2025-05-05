@@ -23,7 +23,15 @@ class Game
 
   def get_player_guess
     puts "Guess a letter:"
-    gets.chomp.downcase
+    guess = gets.chomp.downcase
+
+    if guess == 'save'
+      Save.save_game(self)
+      puts "Game saved!"
+      exit
+    end
+
+    guess
   end
 
   def validate_guess(guess)
@@ -65,6 +73,11 @@ class Game
   end
 
   def play_game
+
+    puts "Welcome to the Guillotine!"
+    puts "Guess the word before you lose your head!"
+    puts "Type 'save' at any time to save your game and quit."
+
     while @strike_counter < 6
       play_round
     end

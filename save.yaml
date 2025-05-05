@@ -1,0 +1,7 @@
+--- !ruby/object:Game
+secret_word: occupied
+strike_counter: 1
+correct_guesses:
+- e
+incorrect_guesses:
+- a

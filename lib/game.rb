@@ -44,6 +44,12 @@ class Game
       @strike_counter += 1
       puts "Strike #{@strike_counter}!"
     end
+    if !display_word_state.include?('_')
+      puts
+      puts display_word_state
+      puts "You guessed '#{@secret_word}'! You win!"
+      exit
+    end
   end
 
   def play_round

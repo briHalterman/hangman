@@ -20,4 +20,9 @@ class Game
       end
     end.join(' ')
   end
+
+  def get_player_guess
+    puts "Guess a letter:"
+    gets.chomp.downcase
+  end
 end

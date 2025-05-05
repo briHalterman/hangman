@@ -8,4 +8,13 @@ class Save
       file.write(YAML.dump(game))
     end
   end
+
+  def self.load_game
+    if File.exist?(SAVE_FILE)
+      YAML.unsafe_load_file(SAVE_FILE)
+    else
+      puts "Saved game not found."
+      exit
+    end
+  end
 end

@@ -69,6 +69,6 @@ class Game
       play_round
     end
     puts "Secret word: '#{@secret_word}'"
-    puts "Too many strikes! You're out!"
+    puts "Too many strikes! Off with your head!"
   end
 end

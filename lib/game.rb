@@ -45,4 +45,23 @@ class Game
       puts "Strike #{@strike_counter}!"
     end
   end
+
+  def play_round
+    puts "Secret word: #{@secret_word}" # For development and testing
+    puts
+    puts "Strikes: #{@strike_counter}"
+    # puts "Correct guesses: #{@correct_guesses}"
+    puts "Incorrect guesses: #{@incorrect_guesses}"
+
+    puts display_word_state
+    guess = get_player_guess
+    return unless validate_guess(guess)
+    process_guess(guess)
+  end
+
+  def play_game
+    while @strike_counter < 6
+      play_round
+    end
+  end
 end
